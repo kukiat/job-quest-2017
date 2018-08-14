@@ -17,7 +17,6 @@ class TodoInput extends React.Component {
   }
   
   render() {
-    console.log('child')
     const { title } = this.state
     return (
       <input 
