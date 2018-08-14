@@ -1,0 +1,32 @@
+.todo-item {
+  border: 1px solid #FFFFFF;
+  background-color: #FFF;
+  transition: background-color 0.4s;
+  margin: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.wrap-todo-item {
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+.wrap-todo-item p {
+  margin: 5px 10px;
+}
+.wrap-todo-item .date {
+  font-size: 12px;
+  font-style: italic;
+  color:rgb(29, 71, 148);
+}
+.todo-input {
+  border: 2px solid #DFE2E7;
+  width: 100%;
+  font-size: 16px;
+  height: 25px;
+  border-radius: 5px;
+  background-color: #FAFBFC;
+}
+.todo-item:hover {
+  background-color: rgb(240, 239, 239);
+}

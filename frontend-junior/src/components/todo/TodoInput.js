@@ -1,4 +1,5 @@
 import React from 'react'
+import '../../styles/todo.css'
 
 class TodoInput extends React.Component {
   state = {
@@ -20,8 +21,9 @@ class TodoInput extends React.Component {
     const { title } = this.state
     return (
       <input 
-        className="todo-form" 
+        className="todo-input" 
         type="text" 
+        placeholder="Todo here"
         value={title} 
         onChange={this.handleInput}
         onKeyUp={this.onEnter}

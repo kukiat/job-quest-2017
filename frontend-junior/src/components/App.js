@@ -58,15 +58,22 @@ class App extends Component {
     const todos = this.filterTodos()
     return (
       <div className="App">
-        <TodoInput createTodo={this.createTodo}/>
-        <TodoFilter onFilterChange={this.onFilterChange}/>
-        { todos.map(todo => (
-          <TodoItem 
-            key={todo.id} 
-            todo={todo}
-            onStatusChange={this.onStatusChange}
+        <div className="wrap-app">
+          <TodoInput 
+            createTodo={this.createTodo}
           />
-        ))}
+          <TodoFilter 
+            onFilterChange={this.onFilterChange}
+            filterTodos={this.filterTodos}
+          />
+          { todos.map(todo => (
+            <TodoItem 
+              key={todo.id} 
+              todo={todo}
+              onStatusChange={this.onStatusChange}
+            />
+          ))}
+        </div>
       </div>
     );
   }
