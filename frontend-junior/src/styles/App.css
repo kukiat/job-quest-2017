@@ -15,3 +15,7 @@ body {
   max-width: 400px;
   margin: 30px auto;
 }
+
+.todo-list {
+  margin-top: 15px;
+}

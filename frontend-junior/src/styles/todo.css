@@ -1,13 +1,29 @@
 .todo-item {
   border: 1px solid #FFFFFF;
-  background-color: #FFF;
-  transition: background-color 0.4s;
+  transition: background-color 0.2s;
   margin: 10px 0;
   border-radius: 5px;
   cursor: pointer;
 }
+.todo-filter-container {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+.todo-filter-btn {
+  cursor: pointer;
+  color: #FFF;
+  background-color: #133778;
+  padding: 7px 0;
+  border-radius: 5px;
+  width: 100px;
+  /* border: 2px solid #133778; */
+  border-style: solid;
+  border-width: 2px;
+  height: 19px;
+}
 .wrap-todo-item {
-  padding: 5px;
+  padding: 3px;
   display: flex;
   justify-content: space-between;
 }
@@ -17,16 +33,19 @@
 .wrap-todo-item .date {
   font-size: 12px;
   font-style: italic;
-  color:rgb(29, 71, 148);
+}
+.wrap-todo-input {
+  /* padding: 10px; */
 }
 .todo-input {
-  border: 2px solid #DFE2E7;
+  border: 1px solid #FFF;
+  font-size: 14px;
+  max-width: 100%;
   width: 100%;
-  font-size: 16px;
-  height: 25px;
+  height: 28px;
   border-radius: 5px;
-  background-color: #FAFBFC;
+  background-color: #FFF;
 }
-.todo-item:hover {
-  background-color: rgb(240, 239, 239);
+.wrap-todo-input h4 {
+  color: #FFF;
 }

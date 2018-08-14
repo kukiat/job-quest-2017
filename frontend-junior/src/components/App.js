@@ -55,6 +55,7 @@ class App extends Component {
   }
 
   render() {
+    const { filter } = this.state
     const todos = this.filterTodos()
     return (
       <div className="App">
@@ -63,16 +64,19 @@ class App extends Component {
             createTodo={this.createTodo}
           />
           <TodoFilter 
+            filter={filter}
             onFilterChange={this.onFilterChange}
             filterTodos={this.filterTodos}
           />
-          { todos.map(todo => (
-            <TodoItem 
-              key={todo.id} 
-              todo={todo}
-              onStatusChange={this.onStatusChange}
-            />
-          ))}
+          <div className="todo-list">
+            { todos.map(todo => (
+              <TodoItem 
+                key={todo.id} 
+                todo={todo}
+                onStatusChange={this.onStatusChange}
+              />
+            ))}
+          </div>
         </div>
       </div>
     );

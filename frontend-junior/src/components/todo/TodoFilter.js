@@ -6,9 +6,15 @@ class TodoFilter extends React.Component {
     const { onFilterChange } = this.props 
     const filterList = ['All', 'Complete', 'Active']
     return (
-      <div>
+      <div className="todo-filter-container">
         { filterList.map(type => (
-          <button onClick={() => onFilterChange(type)}>{type}</button>
+          <div 
+            className="todo-filter-btn" 
+            style={type === this.props.filter ? {} :  {borderColor: '#133778'}}
+            onClick={() => onFilterChange(type)}
+          >
+            {type}
+          </div>
         ))}
       </div>
     )
