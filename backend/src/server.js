@@ -1,8 +1,14 @@
-const express = require('express')
 const bodyParser = require('body-parser')
+const cors = require('cors')
+const express = require('express')
+const morgan = require('morgan')
 
-const app = express()
 const routes = require('./routes')
+const app = express()
+
+app.use(cors())
+
+app.use(morgan('dev'))
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
