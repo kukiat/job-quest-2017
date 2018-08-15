@@ -13,14 +13,40 @@ const getAllTodos = async (req, res, next) => {
 
 const createTodo = async (req, res, next) => {
   try {
-    await TodoModel.create(req.body)
-    respondSuccess(res)()
+    const message = await TodoModel.create(req.body)
+    respondSuccess(res)(message)
   }catch(err) {
     respondError(res)(err)
   }
 }
 
+const updateTodo = async (req, res, next) => {
+  try {
+    const request = {
+      id: req.params.id,
+      title: req.body.title,
+      description: req.body.description
+    }
+    const message = await TodoModel.update(request)
+    respondSuccess(res)(message)
+  }catch(err) {
+    respondError(res)(err)
+  }
+}
+
+const deleteTodo = async (req, res, next) => {
+  try {
+    const message = await TodoModel.remove(req.params.id)
+    respondSuccess(res)(message)
+  }catch(err) {
+    respondError(res)(err)
+  }
+}
+
+
 module.exports = {
   getAllTodos,
-  createTodo
+  createTodo,
+  deleteTodo,
+  updateTodo
 }

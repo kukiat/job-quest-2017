@@ -1,4 +1,4 @@
-const respondSuccess = res => () => res.status(200).send({ message: 'success' })
+const respondSuccess = res => message => res.status(200).send({ message: message || 'success' })
 
 const respondResult = res => results => res.status(200).send({ results })
 
